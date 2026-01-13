@@ -13,7 +13,7 @@ export default function ProjectCard({ project, index }: props) {
 
     useEffect(() => {
         getLinkPreview(project?.url).then((data: any) => {
-            // console.log(data)
+            console.log(data)
             setPreview(data?.images[0])
         })
             .catch((_) => {
@@ -27,7 +27,7 @@ export default function ProjectCard({ project, index }: props) {
                 index % 2 === 0 ?
                     <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16`}>
                         <div className={`w-full md:w-[40%] shadow-lg shadow-[#ec9d62] rounded-lg`}>
-                            <img src={preview !== "" ? preview : project.image} alt={project.title} className={`w-full aspect-[1.5] lg:aspect-video object-cover rounded-lg`} />
+                            <img src={preview !== "" ? preview : project.image} alt={project.title} className={`w-full aspect-[1.5] lg:aspect-video object-cover rounded-lg object-top`} />
                         </div>
                         <div className={`w-full lg:w-[60%] tracking-widest flex flex-col gap-y-5`}>
                             <div className="w-full">
@@ -83,7 +83,7 @@ export default function ProjectCard({ project, index }: props) {
                             </Link>
                         </div>
                         <div className={`w-full md:w-[40%] shadow-lg shadow-[#ec9d62] rounded-lg`}>
-                            <img src={project?.id !== "" ? preview : project.image} alt={project.title} className={`w-full aspect-[1.5] lg:aspect-video object-cover rounded-lg`} />
+                            <img src={preview !== "" ? preview : project.image} alt={project.title} className={`w-full aspect-[1.5] lg:aspect-video object-cover rounded-lg object-top`} />
                         </div>
                         <div className={`md:hidden w-full xl:w-[60%] flex flex-col gap-y-5`}>
                             <div className="w-full">

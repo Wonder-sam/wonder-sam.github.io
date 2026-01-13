@@ -6,6 +6,7 @@ import GalleryPage from "./pages/gallery-page"
 import CVPage from "./pages/cv-page"
 import ReferencePage from "./pages/reference-page"
 import ProjectDetailsPage from "./pages/project-details-page"
+import NotFound from "./pages/not-found"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="references" element={<ReferencePage />} />
         <Route path="cv" element={<CVPage />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

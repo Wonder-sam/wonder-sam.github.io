@@ -50,6 +50,19 @@ export const projects = [
     },
     {
         id: 1,
+        title: "Yoko Global - Website",
+        about: "The official website for Yoko Global",
+        stack: "Frontend Web development",
+        link: "www.gish.com",
+        stacks: [
+            "React-Vite",
+        ],
+        github: "",
+        image: "/yoko.png",
+        url: "https://yokoglobal.on-forge.com/"
+    },
+    {
+        id: 2,
         title: "La Bethel YPG - Website & Web Application",
         about: "A management system for La Bethel youth group to help executives keep tabs on their members, manage attendance, draw budgets, etc.",
         stack: "Full Stack Development",
@@ -61,10 +74,10 @@ export const projects = [
         ],
         github: "",
         image: "https://images.unsplash.com/photo-1605379399843-5870eea9b74e?q=80&w=3596&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        url: "https://ypg-delta.vercel.app"
+        url: "https://labethelypg.vercel.app/home"
     },
     {
-        id: 2,
+        id: 3,
         title: "AB Pastries - Website",
         about: "An e-commmerce site for a pastry shop. ",
         stack: "Frontend Web development",
@@ -78,7 +91,7 @@ export const projects = [
     },
 
     {
-        id: 3,
+        id: 4,
         title: "StrongerUs - Website",
         about: "A website for a company with booking services.",
         stack: "Frontend Web development",
