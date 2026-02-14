@@ -10,19 +10,19 @@ import { Link } from "react-router";
 import { useEffect, useRef } from "react";
 
 export default function HomePage() {
-    const meRef =  useRef<HTMLDivElement>(null)
+    const meRef = useRef<HTMLDivElement>(null)
 
-    useEffect(()=>{
+    useEffect(() => {
         // if(meRef.current){
         //     meRef.current.style.opacity = "1"
         // }
-    },[])
+    }, [])
 
     return (
         <div className="w-full flex flex-col">
             <title>Wonder - Home</title>
             <div className="relative w-full grainy-bg bg-[linear-gradient(to_right,#202123ef_60%,#8383811d_150%),url('/wood.jpg')] bg-right bg-cover bg-no-repeat h-screen flex pt-20 overflow-hidden">
-                <div className='absolute w-full md:w-[70%] xl:w-[50%] flex flex-col gap-y-10 top-[25%] xl:top-[50%] left-[20%] -translate-y-[25%] xl:-translate-y-[50%] -translate-x-[20%] px-10 xl:px-0'>
+                <div className='absolute w-full md:w-[70%] xl:w-[50%] flex flex-col gap-y-10 top-[25%] xl:top-[50%] left-[20%] -translate-y-[25%] xl:-translate-y-[50%] -translate-x-[20%] px-10 xl:px-0 z-30'>
                     <div className="flex flex-col gap-y-3">
                         <p className=' text-white text-2xl lg:text-5xl duration-75 ease-in transition-all 2xl:text-6xl font-semibold animate-[color-anime]'>Hi, <span>I'm Samuel Sowah Nai</span></p>
                         <p className='text-3xl xl:text-4xl font-bold text-[#ec9d62]'>Full Stack Developer</p>
@@ -43,8 +43,10 @@ export default function HomePage() {
                         </button>
                     </div>
                 </div>
-                <div ref={meRef} className="z-20 w-[80%] md:w-[50%] absolute right-0 bottom-0 2xl:top-0 opacity-0 animate-fadeIn">
-                    <img src="/wonder-only.png" className="w-full object-cover" />
+                <div className=" absolute w-full h-full bg-black/40 xl:bg-black/20 top-0 z-20 backdrop-blur-xs md:backdrop-blur-none" />
+                <div ref={meRef} className="z-10 w-full md:w-[70%] lg:w-[55%] xl:w-[50%] h-[92%] absolute right-0 md:right-[2%] bottom-0  opacity-0 animate-fadeIn">
+                    <img src="/sittingg.png" className="hidden md:block w-full object-cover object-top" />
+                    <img src="/frontt.png" className="md:hidden w-full object-cover object-top" />
                 </div>
                 <div className="absolute w-full xl:w-[70%] px-10 xl:px-0 bottom-[10%] left-[50%] -translate-x-[50%] flex flex-col md:flex-row item-center justify-between gap-y-10 z-20">
                     <div className="flex flex-col md:flex-row gap-y-5 gap-x-24">
