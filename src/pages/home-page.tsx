@@ -2,7 +2,7 @@ import { BsCodeSlash, BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsPhone, Bs
 import { DiFirebase, DiGit, DiMysql, DiPostgresql, DiPython, DiReact } from 'react-icons/di';
 import { GrDocker } from 'react-icons/gr';
 import { RiHtml5Fill, RiJavaFill, RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiCplusplus, SiCss3, SiExpress, SiFastapi, SiNestjs } from 'react-icons/si';
+import { SiCplusplus, SiCss3, SiExpress, SiFastapi, SiNestjs, SiSpringboot } from 'react-icons/si';
 import SkillCard from '../components/cards/skill-card';
 import { BiLogoFlutter, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -57,7 +57,7 @@ export default function HomePage() {
                             <div className="text-sm">
                                 <p className="uppercase text-white text-xs font-semibold mb-2">Contact Information</p>
                                 <p className="text-white/50 underline">+233 (55) 154 0686</p>
-                                <p className="text-white/50 underline">samuel.nai@yahoo.com</p>
+                                <p className="text-white/50 underline">+233 (50) 278 4514</p>
                             </div>
                         </div>
                         <div className="flex gap-x-3">
@@ -72,16 +72,16 @@ export default function HomePage() {
                         </div>
                     </div>
                     <div className="flex gap-x-16 items-center">
-                        <Link to="https://www.instagram.com/esesen">
+                        <Link to="https://www.instagram.com/es_es_en">
                             <BsInstagram className="text-white text-3xl" />
                         </Link>
-                        <Link to="https://www.facebook.com/samuel123">
+                        <Link to="https://www.facebook.com/samuel.nai.777">
                             <BsFacebook className="text-white text-3xl" />
                         </Link>
                         <Link to="https://www.x.com/esesen">
                             <BsTwitterX className="text-white text-2xl" />
                         </Link>
-                        <Link to="https://www.youtube.com/esesen">
+                        <Link to="https://www.linkedin.com/in/wonder-sam/">
                             <BsLinkedin className="text-white text-3xl" />
                         </Link>
                     </div>
@@ -124,7 +124,8 @@ export default function HomePage() {
                                             <p className="text-[#ec9d62]">{item.start_date} - {item.end_date}</p>
                                         </div>
                                         <div className="flex flex-col gap-y-1.5">
-                                            <p className="text-white text-sm md:text-base">{item.certification} - {item.institution}</p>
+                                            <p className="text-white text-sm md:text-base">{item.institution}</p>
+                                            <p className="text-white text-sm md:text-base">{item.certification} - {item.programme}, {item?.class}</p>
                                             <p className="text-white/80 text-xs md:text-base">{item?.description}</p>
                                         </div>
                                     </div>
@@ -170,6 +171,7 @@ export default function HomePage() {
                                 name={item?.name}
                                 icon={item?.icon}
                                 skillLevel={item?.skillLevel}
+                                 rank={rankSkill(item?.skillLevel)}
                             />
                         ))
                     }
@@ -187,6 +189,7 @@ export default function HomePage() {
                                 name={item?.name}
                                 icon={item?.icon}
                                 skillLevel={item?.skillLevel}
+                                 rank={rankSkill(item?.skillLevel)}
                             />
                         ))
                     }
@@ -204,6 +207,7 @@ export default function HomePage() {
                                 name={item?.name}
                                 icon={item?.icon}
                                 skillLevel={item?.skillLevel}
+                                rank={rankSkill(item?.skillLevel)}
                             />
                         ))
                     }
@@ -218,6 +222,7 @@ const education = [
         start_date: "2019-10-09",
         end_date: "2024-11-09",
         programme: "BsC Computer Science",
+        class: "First Class Honors",
         certification: "Degree",
         institution: "University of Ghana",
         description: "Studied Mathematical Science and specialised in Computer Science. Notable courses undertaken include Object-Oriented Programming and Data Structures (Java), Intro to Design and Programming for Web (HTML & CSS), Operating Systems, Machine Learning, Introduction to Database Systems, Human Computer Interactions, Network Servers and Infrastructure."
@@ -321,9 +326,9 @@ const frameworks = [
         icon: <SiExpress className="text-[#ec9d62] text-4xl" />
     },
     {
-        name: "Nest Js",
+        name: "Spring Boot",
         skillLevel: 30,
-        icon: <SiNestjs className="text-[#ec9d62] text-4xl" />
+        icon: <SiSpringboot className="text-[#ec9d62] text-4xl" />
     },
     {
         name: "React Native - Expo",
@@ -340,12 +345,12 @@ const frameworks = [
 const skills = [
     {
         name: "CSS",
-        skillLevel: 90,
+        skillLevel: 80,
         icon: <SiCss3 className="text-[#ec9d62] text-4xl" />
     },
     {
         name: "Tailwind CSS",
-        skillLevel: 90,
+        skillLevel: 80,
         icon: <RiTailwindCssFill className="text-[#ec9d62] text-4xl" />
     },
     {
@@ -370,7 +375,20 @@ const skills = [
     },
     {
         name: "Git",
-        skillLevel: 80,
+        skillLevel: 70,
         icon: <DiGit className="text-[#ec9d62] text-4xl" />
     },
 ]
+
+
+function rankSkill(score:number) {
+  if (score < 0 || score > 100) {
+    return "Invalid score"; // handle out-of-range values
+  }
+
+  if (score <= 20) return "Beginner";
+  if (score <= 40) return "Intermediate";
+  if (score <= 70) return "Advanced";
+  if (score <= 80) return "Expert";
+  return "Master"; // score 81-100
+}

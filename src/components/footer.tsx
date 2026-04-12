@@ -1,4 +1,5 @@
 import { BsFacebook, BsInstagram, BsLinkedin, BsSlack, BsTwitterX, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router";
 
 export default function Footer() {
     return (
@@ -14,19 +15,27 @@ export default function Footer() {
                         <p className="text-[#ec9d62]">—Thomas Edison</p>
                     </div>
                     <div className="w-full flex">
-                        <input 
-                        className="w-full bg-white rounded-tl-xl rounded-bl-xl px-5 placeholder:italic placeholder:text-sm"
-                        placeholder="Message"
+                        <input
+                            className="w-full bg-white rounded-tl-xl rounded-bl-xl px-5 placeholder:italic placeholder:text-sm"
+                            placeholder="Message"
                         />
                         <button className="bg-[#ec9d62] rounded-tr-xl rounded-br-xl text-sm py-2.5 px-8 text-white">Send</button>
                     </div>
                     <div className="flex gap-x-10 items-center">
-                        <BsInstagram className="text-white text-2xl" />
-                        <BsFacebook className="text-white text-2xl" />
-                        <BsTwitterX className="text-white text-2xl" />
-                        <BsYoutube className="text-white text-2xl" />
-                        <BsLinkedin className="text-white text-2xl" />
-                        <BsSlack className="text-white text-2xl" />
+                        <Link to="https://www.instagram.com/es_es_en">
+                            <BsInstagram className="text-white text-2xl" />
+                        </Link>
+                        <Link to="https://www.facebook.com/samuel.nai.777">
+                            <BsFacebook className="text-white text-2xl" />
+                        </Link>
+                        <Link to="https://www.x.com/esesen">
+                            <BsTwitterX className="text-white text-2xl" />
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/wonder-sam/">
+                            <BsLinkedin className="text-white text-2xl" />
+                        </Link>
+                        {/* <BsYoutube className="text-white text-2xl" /> */}
+                        {/* <BsSlack className="text-white text-2xl" /> */}
                     </div>
                 </div>
             </div>

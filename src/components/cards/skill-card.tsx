@@ -7,8 +7,9 @@ interface props {
     name: string;
     skillLevel: number;
     icon: any;
+    rank: string;
 }
-export default function SkillCard({ icon, name, skillLevel }: props) {
+export default function SkillCard({ icon, name, skillLevel, rank }: props) {
     const objectRef = useRef<any>(null)
     const [value, setValue] = useState(0)
 
@@ -42,7 +43,7 @@ export default function SkillCard({ icon, name, skillLevel }: props) {
                 </div>
                 <div className="flex flex-col gap-y-2">
                     <p className="text-[#ec9d62] font-semibold text-xl">{name}</p>
-                    <p className="text-white">Master</p>
+                    <p className="text-white">{rank}</p>
                 </div>
             </div>
             <div ref={objectRef} className="relative w-[40%]">

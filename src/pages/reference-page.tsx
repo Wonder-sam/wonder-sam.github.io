@@ -23,7 +23,7 @@ export default function ReferencePage() {
                         references.map((item, index) => (
                             <div key={index} className="relative w-full flex flex-col justify-end pt-10">
                                 <div className="absolute top-0 left-[50%] -translate-x-[50%] w-[70%] aspect-square rounded-full bg-gray-500 z-20 overflow-hidden">
-                                    <img src={item?.image} className="w-full h-full object-cover object-top" />
+                                    <img src={item?.image} className="w-full h-full object-cover object-center" />
                                 </div>
                                 <div key={index} className="relative w-full h-full flex flex-col items-center rounded-xl p-10 gap-y-5 shadow-md pt-[65%]">
                                     <div className='card-bg before:rounded-xl overflow-hidden' />
@@ -31,17 +31,17 @@ export default function ReferencePage() {
                                         <p className="text-xs text-white/80">{item.expertise}</p>
                                         <p className="font-medium text-white">{item?.name}</p>
                                     </div>
-                                    <div className="w-full z-20">
+                                    <Link to={item?.link} className="w-full z-20">
                                         <p className="text-center text-[#ec9d62]">{item?.description}</p>
-                                    </div>
+                                    </Link>
                                     <div className="w-[80%] flex gap-x-10 items-center justify-center z-20">
-                                        <Link to={item?.instagram}>
+                                        <Link to={item?.instagram} className="hidden">
                                             <BsInstagram className="text-white text-2xl" />
                                         </Link>
                                         <Link to={item?.x}>
                                             <BsTwitterX className="text-white text-2xl" />
                                         </Link>
-                                        <Link to={item?.youtube}>
+                                        <Link to={item?.linkedIn}>
                                             <BsLinkedin className="text-white text-2xl" />
                                         </Link>
                                     </div>
@@ -57,34 +57,48 @@ export default function ReferencePage() {
 
 const references = [
     {
-        expertise: "Software Engineer",
-        name: "Christian Abrokwa",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptatem quis quia accusantium mollitia nulla quidem molestiae voluptatum, qui rerum provident nisi, at dicta odio itaque corporis temporibus quas esse.",
+        expertise: "General Manager",
+        name: "Paul Dwamena",
+        description: "Davige Integral Solutions",
         instagram: "",
+        link: "",
         x: "",
-        facebook: "",
+        linkedIn: "https://www.linkedin.com/in/paul-dwamena-5b2493151/",
+        youtube: "",
+        image: "/references/paulo.jpeg",
+    },
+    {
+        expertise: "Senior Backend Engineer",
+        name: "Christian Abrokwa",
+        description: "Mybitstore",
+        instagram: "",
+        link: "https://www.mybitstore.com/",
+        x: "https://x.com/Daquiver1",
+        linkedIn: "https://www.linkedin.com/in/daquiver/",
         youtube: "",
         image: "/references/daquiver.jpeg",
     },
     {
-        expertise: "ML Engineer",
+        expertise: "Software Engineer L1",
         name: "Etorman Alfred Klu",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptatem quis quia accusantium mollitia nulla quidem molestiae voluptatum, qui rerum provident nisi, at dicta odio itaque corporis temporibus quas esse.",
+        description: "Turntabl",
         instagram: "",
-        x: "",
-        facebook: "",
+        link: "https://turntabl.io/",
+        x: "https://x.com/aeklu003",
+        linkedIn: "https://www.linkedin.com/in/etornamklu/",
         youtube: "",
         image: "/references/klutse.jpeg"
     },
     {
-        expertise: "UI/UX Designer",
+        expertise: "Product Designer",
         name: "Peter Amexo",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus voluptatem quis quia accusantium mollitia nulla quidem molestiae voluptatum, qui rerum provident nisi, at dicta odio itaque corporis temporibus quas esse.",
+        description: "MTN",
         instagram: "",
-        x: "",
-        facebook: "",
+        link: "https://www.mtn.com/",
+        x: "https://x.com/eaPeter5",
+        linkedIn: "https://www.linkedin.com/in/emmanuel-peter-amexo-09a0b11b8/",
         youtube: "",
-        image: "https://smurfmagic.com/layout_en/images/contents/smurf09.png"
-
+        image: "/references/peter.jpg"
     },
 ]
+
