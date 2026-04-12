@@ -1,4 +1,4 @@
-import { BsFacebook, BsInstagram, BsLinkedin, BsSlack, BsTwitterX, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { Link } from "react-router";
 
 export default function Footer() {

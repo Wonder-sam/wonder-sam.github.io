@@ -2,7 +2,7 @@ import { BsCodeSlash, BsFacebook, BsGithub, BsInstagram, BsLinkedin, BsPhone, Bs
 import { DiFirebase, DiGit, DiMysql, DiPostgresql, DiPython, DiReact } from 'react-icons/di';
 import { GrDocker } from 'react-icons/gr';
 import { RiHtml5Fill, RiJavaFill, RiJavascriptFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiCplusplus, SiCss3, SiExpress, SiFastapi, SiNestjs, SiSpringboot } from 'react-icons/si';
+import { SiCplusplus, SiCss3, SiExpress, SiFastapi, SiSpringboot } from 'react-icons/si';
 import SkillCard from '../components/cards/skill-card';
 import { BiLogoFlutter, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandReactNative } from "react-icons/tb";
